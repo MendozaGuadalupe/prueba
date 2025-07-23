@@ -1,0 +1,16 @@
+name: sumaAutomatica
+
+on: [push]
+
+jobs:
+  sumar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Sumar dos números
+        run: |
+          NUM1=5
+          NUM2=7
+          RESULTADO=$((NUM1 + NUM2))
+          echo "Resultado de la suma: $RESULTADO"
